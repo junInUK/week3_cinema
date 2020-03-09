@@ -12,11 +12,11 @@ Ticket.delete_all
 Film.delete_all
 Customer.delete_all
 
-customer1 = Customer.new({"name"=>"alex","funds"=>30})
+customer1 = Customer.new({"name"=>"alex","funds"=>30.0})
 customer1.save()
-customer2 = Customer.new({"name"=>"bob","funds"=>40})
+customer2 = Customer.new({"name"=>"bob","funds"=>40.0})
 customer2.save()
-customer3 = Customer.new({"name"=>"sam","funds"=>50})
+customer3 = Customer.new({"name"=>"sam","funds"=>50.0})
 customer3.save()
 
 film1 = Film.new({"title"=>"007 sky fall","price"=>5.4})

@@ -28,7 +28,7 @@ class Cinema
       return nil
     end
 
-    customer.funds -= film.price
+    customer.funds = (BigDecimal(customer.funds.to_s) - BigDecimal(film.price.to_s)).to_f
     customer.update
     screening.seats -= 1
     screening.update

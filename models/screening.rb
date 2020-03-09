@@ -54,6 +54,20 @@ class Screening
     return screening
   end
 
-
+  def Screening.get_most_popular_screening_by_film_id(film_id)
+    # binding.pry
+    sql = "SELECT tickets.screening_id,count(*) as count from tickets
+    inner join screenings on tickets.screening_id = screenings.id
+    where screenings.film_id = $1
+    group by tickets.screening_id
+    order by count desc"
+    value = [film_id]
+    result = SqlRunner.run(sql,value)
+    if result != nil
+      most_popular_screening_id = result.first["screening_id"].to_i
+      return Screening.get_by_id(most_popular_screening_id)
+    end
+    return nil
+  end
 
 end

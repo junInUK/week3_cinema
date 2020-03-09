@@ -53,15 +53,5 @@ cinema_star.sell_ticket(customer1.id,screening_panda_2.id)
 cinema_star.sell_ticket(customer2.id,screening_panda_2.id)
 cinema_star.sell_ticket(customer3.id,screening_panda_2.id)
 
-# ticket1 = Ticket.new("film_id"=>film1.id,"customer_id"=>customer1.id)
-# ticket1.save()
-# ticket2 = Ticket.new("film_id"=>film2.id,"customer_id"=>customer2.id)
-# ticket2.save()
-# ticket2.film_id = film3.id
-# ticket2.update()
-# ticket3 = Ticket.new("film_id"=>film2.id,"customer_id"=>customer1.id)
-
-
-
 binding.pry
 nil
